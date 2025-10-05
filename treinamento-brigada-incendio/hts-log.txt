@@ -1,0 +1,69 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 04 Oct 2025 16:41:52 at https://themes.webswaala.com/CMS/WW74/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "pt_BR, en, *" https://themes.webswaala.com/CMS/WW74/ -O1 "D:\treinamento-brigada-incendio\treinamento-brigada-incendio" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:43:48	Error: 	"Bad Request" (400) at link https://themes.webswaala.com/CMS/WW74/wp-admin/admin-ajax.php (from https://themes.webswaala.com/CMS/WW74/)
+16:43:48	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/)
+16:43:48	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/)
+16:46:16	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=203
+16:46:16	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=203 to https://themes.webswaala.com/CMS/WW74/services/
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/services/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/services/)
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/services/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/services/)
+16:46:17	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=200
+16:46:17	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=200 to https://themes.webswaala.com/CMS/WW74/our-team/
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/our-team/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/our-team/)
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/our-team/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/our-team/)
+16:46:17	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=206
+16:46:17	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=206 to https://themes.webswaala.com/CMS/WW74/faq/
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/faq/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/faq/)
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/faq/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/faq/)
+16:46:17	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=209
+16:46:17	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=209 to https://themes.webswaala.com/CMS/WW74/404-error/
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/404-error/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/404-error/)
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/404-error/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/404-error/)
+16:46:17	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=17
+16:46:17	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=17 to https://themes.webswaala.com/CMS/WW74/about/
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/about/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/about/)
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/about/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/about/)
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/blog/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/blog/)
+16:46:17	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/blog/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/blog/)
+16:46:23	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=20
+16:46:23	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=20 to https://themes.webswaala.com/CMS/WW74/contact/
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/contact/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/contact/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/contact/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/contact/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/wp-content/plugins/unlimited-for-elementor-premium/assets_libraries/owl-carousel-new/assets/owl.video.play.png (from https://themes.webswaala.com/CMS/WW74/wp-content/plugins/unlimited-for-elementor-premium/assets_libraries/owl-carousel-new/assets/owl.carousel.css)
+16:46:23	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=147
+16:46:23	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=147 to https://themes.webswaala.com/CMS/WW74/2024/08/07/female-firefighter-in-protective-uniform-standing/
+16:46:23	Error: 	"Method Not Allowed" (405) at link https://themes.webswaala.com/CMS/WW74/xmlrpc.php (from https://themes.webswaala.com/CMS/WW74/2024/08/07/female-firefighter-in-protective-uniform-standing/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/female-firefighter-in-protective-uniform-standing/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/2024/08/07/female-firefighter-in-protective-uniform-standing/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/female-firefighter-in-protective-uniform-standing/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/2024/08/07/female-firefighter-in-protective-uniform-standing/)
+16:46:23	Warning: 	File not parsed, looks like binary: https://themes.webswaala.com/CMS/WW74/wp-content/gravatars/7932b2e116b076a54f452848eaabd5857f61bd957fe8a218faf216f24c9885bb
+16:46:23	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=145
+16:46:23	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=145 to https://themes.webswaala.com/CMS/WW74/2024/08/07/high-risk-activities-and-accident-control-measures/
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/high-risk-activities-and-accident-control-measures/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/2024/08/07/high-risk-activities-and-accident-control-measures/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/high-risk-activities-and-accident-control-measures/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/2024/08/07/high-risk-activities-and-accident-control-measures/)
+16:46:23	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=143
+16:46:23	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=143 to https://themes.webswaala.com/CMS/WW74/2024/08/07/honeywell-to-showcase-new-first-responder-gear/
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/honeywell-to-showcase-new-first-responder-gear/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/2024/08/07/honeywell-to-showcase-new-first-responder-gear/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/honeywell-to-showcase-new-first-responder-gear/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/2024/08/07/honeywell-to-showcase-new-first-responder-gear/)
+16:46:23	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=141
+16:46:23	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=141 to https://themes.webswaala.com/CMS/WW74/2024/08/07/this-uniform-represents-a-commitment-to-service/
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/this-uniform-represents-a-commitment-to-service/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/2024/08/07/this-uniform-represents-a-commitment-to-service/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/this-uniform-represents-a-commitment-to-service/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/2024/08/07/this-uniform-represents-a-commitment-to-service/)
+16:46:23	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=138
+16:46:23	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=138 to https://themes.webswaala.com/CMS/WW74/2024/08/07/they-dont-just-fight-fires-they-conquerfire-fear/
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/they-dont-just-fight-fires-they-conquerfire-fear/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/2024/08/07/they-dont-just-fight-fires-they-conquerfire-fear/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/they-dont-just-fight-fires-they-conquerfire-fear/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/2024/08/07/they-dont-just-fight-fires-they-conquerfire-fear/)
+16:46:23	Warning: 	Moved Permanently for https://themes.webswaala.com/CMS/WW74/?p=130
+16:46:23	Warning: 	File has moved from https://themes.webswaala.com/CMS/WW74/?p=130 to https://themes.webswaala.com/CMS/WW74/2024/08/07/pour-oil-on-troubled-waters-but-neveron-your-fire/
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/pour-oil-on-troubled-waters-but-neveron-your-fire/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/2024/08/07/pour-oil-on-troubled-waters-but-neveron-your-fire/)
+16:46:23	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/2024/08/07/pour-oil-on-troubled-waters-but-neveron-your-fire/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/2024/08/07/pour-oil-on-troubled-waters-but-neveron-your-fire/)
+16:46:26	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/blog/page/2/revslider/revslider.php (from https://themes.webswaala.com/CMS/WW74/blog/page/2/)
+16:46:26	Error: 	"Not Found" (404) at link https://themes.webswaala.com/CMS/WW74/blog/page/2/${e?.bg?.image.src} (from https://themes.webswaala.com/CMS/WW74/blog/page/2/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 34 seconds : 338 links scanned, 292 files written (31401639 bytes overall) [24033454 bytes received at 87713 bytes/sec], 15706808 bytes transferred using HTTP compression in 199 files, ratio 31%, 6.6 requests per connection
+(33 errors, 25 warnings, 0 messages)

@@ -2083,7 +2083,7 @@ ul#lista-local li:last-child {
 																							
 																								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
 																									onload="if(submitted) {
-																										alert('Inscrição enviada com sucesso! A lista será atualizada em instantes.'); 
+																										alert('Inscrição enviada com sucesso! Agradecemos a participação.'); 
 																										this.parentElement.reset(); 
 																										submitted = false; 
 																										/* Aguarda 2s e atualiza a lista */
@@ -2302,21 +2302,20 @@ ul#lista-local li:last-child {
 														 </article>
 														 <!-- #post-20 -->
 													  </div>
-													  <br><br>
+													  <br><br>				<!--
 																		   <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-333be4e" data-id="333be4e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 																			  <div class="elementor-widget-wrap elementor-element-populated">
 																				 <div class="elementor-element elementor-element-461b77b elementor-widget elementor-widget-heading" data-id="461b77b" data-element_type="widget" data-widget_type="heading.default">
 																					<h2 class="elementor-heading-title elementor-size-default">Registros AVCB</h2>
 																					<a href="https://docs.google.com/spreadsheets/d/1mS7SxIiSmNuVySQrjPlVXHpRXh8v2tpGLiLrBG97WsI/export?format=csv&gid=1269550458" style="cursor: pointer;">Relatório de Incrições</a>
 																				 </div>
-																				 <!--
 																				 <div class="elementor-element elementor-element-0d47334 elementor-widget elementor-widget-text-editor" data-id="0d47334" data-element_type="widget" data-widget_type="text-editor.default">
 																					<p id="loading-message">Carregando dados da planilha...</p>
 																					<p><ul id="lista-local"></ul></p>
 																				 </div>
-																				 -->
 																			  </div>
 																		   </div>
+																		   -->
 													  
 												   </main>
 												   <!-- #main -->
@@ -2980,11 +2979,8 @@ ul#lista-local li:last-child {
 		</script>
 
 <script>
-    // URL de publicação do seu CSV
+	/*
     const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSC0lk3lmzr1mdRGxIp5-Ay4oax8wkBkpFuBCiqgW7DHQpWkoSfNj8E0MBbJPuOfdgVaVyxhsxwX3Cb/pub?output=csv';
-	//const csvUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://docs.google.com/spreadsheets/d/e/2PACX-1vSC0lk3lmzr1mdRGxIp5-Ay4oax8wkBkpFuBCiqgW7DHQpWkoSfNj8E0MBbJPuOfdgVaVyxhsxwX3Cb/pub?output=csv')}`;
-	// A URL de publicação do seu CSV, agora passando por um proxy para evitar o erro de CORS
-	//const csvUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://docs.google.com/spreadsheets/d/e/2PACX-1vSC0lk3lmzr1mdRGxIp5-Ay4oax8wkBkpFuBCiqgW7DHQpWkoSfNj8E0MBbJPuOfdgVaVyxhsxwX3Cb/pub?output=csv')}`;
 
     function carregarTodosOsDados() {
         const listaContainer = document.getElementById('lista-local');
@@ -3023,8 +3019,8 @@ ul#lista-local li:last-child {
             });
     }
 
-    // Chama a função para carregar tudo quando a página abrir
     document.addEventListener('DOMContentLoaded', carregarTodosOsDados);
+	*/
 </script>
 
         <div id="search-drawer" class="popup-drawer popup-drawer-layout-fullwidth" data-drawer-target-string="#search-drawer">

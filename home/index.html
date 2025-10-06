@@ -3065,6 +3065,50 @@ ul#lista-local li:last-child {
     });
 </script>
 
+<script>
+    // Executa quando a página terminar de carregar
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // --- LÓGICA DE CONCATENAÇÃO DO BLOCO E APTO (ISOLADO) ---
+        
+        // Encontra o formulário e os campos específicos desta funcionalidade
+        const form = document.getElementById('form_inscricao');
+        const blocoSelect = document.getElementById('bloco-select');
+        const aptoInput = document.getElementById('apto-input');
+        const hiddenInput = document.getElementById('bloco-apto-hidden');
+
+        // Garante que o formulário foi encontrado antes de adicionar o evento
+        if (form && blocoSelect && aptoInput && hiddenInput) {
+
+            // Adiciona um "ouvinte" que é acionado um instante antes do formulário ser enviado
+            form.addEventListener('submit', function() {
+
+                // Pega os valores dos campos no momento do envio
+                const blocoValue = blocoSelect.value;
+                const aptoValue = aptoInput.value;
+                
+                let combinedValue = '';
+
+                // Regra de concatenação inteligente
+                if (blocoValue && aptoValue) {
+                    // 1. Se os dois campos foram preenchidos
+                    combinedValue = `${blocoValue} - Apto ${aptoValue}`;
+                } else if (blocoValue) {
+                    // 2. Se apenas o bloco foi preenchido
+                    combinedValue = blocoValue;
+                } else if (aptoValue) {
+                    // 3. Se apenas o apartamento foi preenchido
+                    combinedValue = `Apto ${aptoValue}`;
+                }
+                // 4. Se nenhum foi preenchido, o valor continua vazio ('')
+
+                // Coloca o valor final no campo oculto que será enviado para o Google
+                hiddenInput.value = combinedValue;
+            });
+        }
+    });
+</script>
+
         <div id="search-drawer" class="popup-drawer popup-drawer-layout-fullwidth" data-drawer-target-string="#search-drawer">
             <div class="drawer-overlay" data-drawer-target-string="#search-drawer"></div>
             <div class="drawer-inner">

@@ -2115,8 +2115,19 @@ ul#lista-local li:last-child {
 																																	<div class="elementor-widget-wrap elementor-element-populated">
 																																		<div class="elementor-element elementor-element-184663a1 elementor-widget elementor-widget-mf-text" data-id="184663a1" data-element_type="widget" data-widget_type="mf-text.default">
 																																			<div class="mf-input-wrapper">
+																																				<label for="cpf-mask" style="display: block; margin-bottom: 5px; font-weight: bold;">CPF</label>
 																																				<input type="text" class="mf-input mf-conditional-input" id="cpf-mask"  name="entry.148276240" placeholder="CPF (exemplo: 123.123.123-12)" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Por favor, informe o CPF completo." maxlength="14" size="30%" required aria-invalid="false">
 																																			</div>
+																																			<br>
+																																			<label for="nascimento-input" style="display: block; margin-bottom: 5px; font-weight: bold;">Data de Nascimento</label>
+																																			<input 
+																																			type="date" 
+																																			class="mf-input mf-conditional-input" 
+																																			id="nascimento-input"
+																																			name="entry.450919249" 
+																																			required 
+																																			aria-invalid="false"
+																																			>
 																																		</div>
 																																	</div>
 																																</div>
@@ -2129,6 +2140,7 @@ ul#lista-local li:last-child {
 																																	<div class="elementor-widget-wrap elementor-element-populated">
 																																		<div class="elementor-element elementor-element-184663a1 elementor-widget elementor-widget-mf-text" data-id="184663a1" data-element_type="widget" data-widget_type="mf-text.default">
 																																			<div class="mf-input-wrapper">
+																																				<label for="cpf-mask" style="display: block; margin-bottom: 5px; font-weight: bold;">Nome completo</label>
 																																				<input type="text" class="mf-input mf-conditional-input" id="nome-completo" name="entry.2048546705" placeholder="Nome Completo" pattern=".*\s+.*" title="Por favor, insira seu nome completo (nome e sobrenome)." minlength="5" maxlength="150" size="80%" required aria-invalid="false">
 																																			</div>
 																																		</div>
@@ -2143,6 +2155,7 @@ ul#lista-local li:last-child {
 																																	<div class="elementor-widget-wrap elementor-element-populated">
 																																		<div class="elementor-element elementor-element-4fff3c8 elementor-widget elementor-widget-mf-telephone" data-id="4fff3c8" data-element_type="widget" data-widget_type="mf-telephone.default">
 																																			<div class="mf-input-wrapper">
+																																			    <label for="cpf-mask" style="display: block; margin-bottom: 5px; font-weight: bold;">WhatsApp<small><em>(opcional)</small></label>
 																																				<input type="tel" id="whatsapp-mask" class="mf-input " name="entry.482477565" placeholder="+55 (11) " aria-invalid="false" size="40%">
 																																			</div>
 																																		</div>
@@ -2157,6 +2170,7 @@ ul#lista-local li:last-child {
 																																	<div class="elementor-widget-wrap elementor-element-populated">
 																																		<div class="elementor-element elementor-element-184663a1 elementor-widget elementor-widget-mf-text" data-id="184663a1" data-element_type="widget" data-widget_type="mf-text.default">
 																																			<div class="mf-input-wrapper">
+																																					<label for="bloco" style="display: block; margin-bottom: 5px; font-weight: bold;">Bloco<small><em>(opcional)</small></label>
 																																					<select id="bloco-select" name="bloco" class="mf-input mf-conditional-input" style="width: 80%">
 																																						<option value="" selected>Escolha o seu bloco...</option>
 																																						<option value="Capri">Capri</option>
@@ -2170,6 +2184,7 @@ ul#lista-local li:last-child {
 																																					&nbsp;&nbsp;
 																																					<br>
 																																					<br>
+																																					<label for="apto-input" style="display: block; margin-bottom: 5px; font-weight: bold;">Apto<small><em>(opcional)</small></label>
 																																					<input 
 																																						type="text"
 																																						id="apto-input" 
@@ -2897,6 +2912,58 @@ ul#lista-local li:last-child {
 			});
 		</script>
 
+<script>
+    // A função validarCPF() que te passei antes continua a mesma.
+    // Se precisar, ela está aqui novamente:
+    function validarCPF(cpf) {
+        cpf = cpf.replace(/[^\d]+/g, '');
+        if (cpf === '' || cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+        let soma = 0, resto;
+        for (let i = 1; i <= 9; i++) soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+        resto = (soma * 10) % 11;
+        if ((resto === 10) || (resto === 11)) resto = 0;
+        if (resto !== parseInt(cpf.substring(9, 10))) return false;
+        soma = 0;
+        for (let i = 1; i <= 10; i++) soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+        resto = (soma * 10) % 11;
+        if ((resto === 10) || (resto === 11)) resto = 0;
+        if (resto !== parseInt(cpf.substring(10, 11))) return false;
+        return true;
+    }
+
+    // A lógica de validação no evento 'blur' é que vamos ajustar:
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputCPF = document.getElementById('cpf-mask');
+        
+        if (inputCPF) {
+            inputCPF.addEventListener('blur', function() {
+                const cpfComMascara = this.value;
+                const cpfSoNumeros = cpfComMascara.replace(/[^\d]/g, ''); // Limpa o CPF para contar os dígitos
+
+                // MUDANÇA PRINCIPAL: A validação do DG só acontece se o campo tiver exatamente 11 dígitos
+                if (cpfSoNumeros.length === 11) {
+                    if (!validarCPF(cpfComMascara)) {
+                        // Se tem 11 dígitos mas o DG está errado, mostra o erro.
+                        this.setCustomValidity('CPF inválido. Por favor, verifique o número digitado.');
+                    } else {
+                        // Se tem 11 dígitos e o DG está correto, limpa qualquer erro.
+                        this.setCustomValidity('');
+                    }
+                } else {
+                    // Se não tiver 11 dígitos (está vazio ou incompleto), limpamos qualquer erro de CPF inválido.
+                    // A validação de campo obrigatório ('required') será feita pelo navegador ao enviar.
+                    this.setCustomValidity('');
+                }
+                
+                // Reporta o status atual (mostra o erro de CPF inválido, se tiver sido definido)
+                this.reportValidity();
+            });
+        }
+        
+        // ... (o resto do seu script para os outros campos continua aqui)
+    });
+</script>
+
 		<script>
 		$(document).ready(function(){
 
@@ -2984,6 +3051,63 @@ ul#lista-local li:last-child {
 			atualizarObrigatoriedade();
 		});
 		</script>
+		
+<script>
+    // Executa o script quando o conteúdo da página estiver totalmente carregado
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // Encontra o campo de data de nascimento pelo seu ID
+        const inputNascimento = document.getElementById('nascimento-input');
+
+        if (inputNascimento) {
+            
+            // --- 1. CALCULA OS LIMITES DE DATA ---
+
+            const hoje = new Date();
+            const anoAtual = hoje.getFullYear();
+            const mesAtual = hoje.getMonth();
+            const diaAtual = hoje.getDate();
+
+            // Data máxima permitida (exatamente 18 anos atrás)
+            const dataMaxima = new Date(anoAtual - 18, mesAtual, diaAtual);
+            
+            // Data mínima permitida (exatamente 100 anos atrás)
+            const dataMinima = new Date(anoAtual - 100, mesAtual, diaAtual);
+
+            // Formata as datas para o padrão YYYY-MM-DD que o input[type=date] aceita
+            const maxDateString = dataMaxima.toISOString().split('T')[0];
+            const minDateString = dataMinima.toISOString().split('T')[0];
+            
+            // --- 2. APLICA OS LIMITES NO CAMPO HTML ---
+            
+            inputNascimento.setAttribute('max', maxDateString);
+            inputNascimento.setAttribute('min', minDateString);
+
+            // --- 3. ADICIONA VALIDAÇÃO COM MENSAGEM PERSONALIZADA ---
+            
+            inputNascimento.addEventListener('blur', function() {
+                // Converte a data digitada pelo usuário para um objeto Date
+                // Adicionamos 'T00:00:00' para evitar problemas com fuso horário
+                const dataSelecionada = new Date(this.value + 'T00:00:00');
+
+                // Verifica se a data está fora dos limites
+                if (dataSelecionada > dataMaxima) {
+                    // Se for menor de 18 anos
+                    this.setCustomValidity('É preciso ter no mínimo 18 anos para se inscrever.');
+                } else if (dataSelecionada < dataMinima) {
+                    // Se for maior de 100 anos
+                    this.setCustomValidity('A idade máxima permitida é de 100 anos.');
+                } else {
+                    // Se a data for válida, limpa a mensagem de erro
+                    this.setCustomValidity('');
+                }
+                
+                // Pede ao navegador para reportar a validade (mostrar a mensagem, se houver)
+                this.reportValidity();
+            });
+        }
+    });
+</script>		
 
 <script>
 	/*
